@@ -1,0 +1,45 @@
+{
+  "name": "markdown",
+  "author": "che1sy",
+  "description": "A Markdown Editor",
+  "private": true,
+  "version": "0.0.0",
+  "main": "electron/main.cjs",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "electron:dev": "electron .",
+    "electron:build": "electron-builder"
+  },
+  "dependencies": {
+    "highlight.js": "^11.8.0",
+    "marked": "^15.0.12",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/tsconfig": "^0.7.0",
+    "cross-env": "^7.0.3",
+    "electron": "^36.3.1",
+    "electron-builder": "^26.0.12",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vue-tsc": "^2.2.8"
+  },
+  "build": {
+    "appId": "com.yourcompany.markdown",
+    "productName": "MarkdownEditor",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "files": [
+      "dist/**",
+      "electron/**"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
